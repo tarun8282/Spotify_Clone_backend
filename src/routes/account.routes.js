@@ -1,9 +1,10 @@
 const express=require("express")
 const router = express.Router()
-const {getprofile,updateProfile} = require("../controller/account.controller")
+const {getprofile,updateProfile,deleteUser} = require("../controller/account.controller")
 
 
 router.get("/profile",getprofile)
-router.put("/profile",updateProfile)
+router.patch("/profile",updateProfile)
+router.delete("/profile",deleteUser)
 
 module.exports=router
